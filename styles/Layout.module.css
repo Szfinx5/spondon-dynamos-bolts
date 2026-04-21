@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  background: #181818;
+}
+
+@media (max-width: 900px) {
+  .container {
+    display: block;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  .main {
+    width: 100vw;
+    min-width: 0;
+    padding: 1.2rem 0.5rem;
+    box-sizing: border-box;
+  }
+}
+
+.main {
+  flex: 1;
+  padding: 2rem 1rem;
+  background: #232323;
+  min-width: 0;
+}

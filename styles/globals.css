@@ -1,0 +1,47 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #181818;
+  color: #ffd600;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ffd600 #232323;
+}
+
+#\_next {
+  min-height: 100vh;
+}
+
+/* Remove unwanted white border from Next.js default */
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #232323;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffd600;
+  border-radius: 4px;
+}
+::-webkit-scrollbar:horizontal {
+  height: 0;
+}
+
+/* Hide scrollbar if not needed */
+body:has(.container) {
+  overflow-y: auto;
+}
+body:has(.container):not(:has(.main > *)) {
+  overflow-y: hidden;
+}

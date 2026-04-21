@@ -1,0 +1,78 @@
+{
+  "teamName": "Spondon Dynamos Under 7 Bolts",
+  "welcomeMessageTop": "A warm welcome to our Spondon Dynamo Bolts grassroots team.",
+  "welcomeMessageBottom": "We play in the Derby Junior League and train in Spondon!",
+  "about": {
+    "description": "We are a passionate grassroots football team for under 7s, playing in the Derby Junior League and training in Spondon.",
+    "officials": [
+      {
+        "name": "Connor Cobbledick",
+        "role": "Manager/Coach"
+      },
+      {
+        "name": "Kelly Betteridge",
+        "role": "Team Secretary"
+      },
+      {
+        "name": "Simon Key",
+        "role": "Assistant Coach"
+      },
+      {
+        "name": "Gabor Havasi",
+        "role": "Assistant Team Manager"
+      },
+      {
+        "name": "Rosie Key",
+        "role": "Assistant Team Manager"
+      }
+    ],
+    "training": [
+      {
+        "day": "Wednesday",
+        "time": "17:30 - 18:30",
+        "location": "Spondon Gravelpit Recreation Ground"
+      },
+      {
+        "day": "Friday",
+        "time": "18:00 - 19:00",
+        "location": "Alvaston Park"
+      }
+    ]
+  },
+  "sponsors": [
+    {
+      "name": "Impact Academy Derby",
+      "description": "Proud sponsor of Spondon Dynamo Bolts. Impact Academy Derby supports youth sports and community engagement.",
+      "logo": "/impact_logo.png"
+    },
+    {
+      "name": "Lonsdale Swimming Pool",
+      "description": "Lonsdale Swimming Pool is a local business dedicated to providing quality swimming facilities and community engagement.",
+      "logo": "/lonsdale_logo.png"
+    }
+  ],
+  "contact": {
+    "manager": "Connor Cobbledick",
+    "phone": "07950 388002",
+    "email": "",
+    "form": true
+  },
+  "parentConsentForm": {
+    "label": "Download Parent Consent Form",
+    "file": "/parent_consent_2024_under16.pdf"
+  },
+  "externalLinks": [
+    {
+      "label": "Spondon Dynamos",
+      "url": "https://spondondynamosfc.co.uk"
+    },
+    {
+      "label": "Derby Junior League",
+      "url": "https://fulltime.thefa.com/index.html?league=121976933"
+    }
+  ],
+  "images": {
+    "logo": "/logo.jpeg",
+    "teamPhoto": "/team.jpeg"
+  }
+}
