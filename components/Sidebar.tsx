@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const menuItems = [
   { label: "Home", href: "/" },
-  { label: "About Bolts", href: "/about" },
+  { label: "Team Bolts", href: "/about" },
   { label: "Sponsors", href: "/sponsors" },
   { label: "Contact Us", href: "/contact" },
   { label: "Parent Consent", href: "/parent-consent" },

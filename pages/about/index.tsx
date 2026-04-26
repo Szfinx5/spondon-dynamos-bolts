@@ -1,5 +1,10 @@
 import Layout from "../../components/Layout";
 import data from "../../data/data.json";
+import dynamic from "next/dynamic";
+
+const Slideshow = dynamic(() => import("../../components/Slideshow"), {
+  ssr: false,
+});
 
 export default function About() {
   return (
@@ -23,7 +28,7 @@ export default function About() {
             color: "#ffd600",
           }}
         >
-          About Bolts
+          Team Bolts
         </h1>
         <p style={{ color: "#eee", fontSize: "1.2rem", marginBottom: "1rem" }}>
           {data.about.description}
@@ -61,6 +66,26 @@ export default function About() {
             </span>
           ))}
         </p>
+        <div>
+          League Matches:
+          <p
+            style={{
+              color: "#eee",
+              gap: "0.5rem",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            {data.about.matches.map((match, index) => (
+              <span key={index}>
+                {match.day} - {match.time} @ {match.location}
+                {index < data.about.matches.length - 1 && <br />}
+              </span>
+            ))}
+          </p>
+        </div>
+        {/* Slideshow */}
+        <Slideshow />
       </section>
     </Layout>
   );

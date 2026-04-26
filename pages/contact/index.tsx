@@ -97,7 +97,17 @@ export default function Contact() {
             {data.contact.phone}
           </a>
         </p>
-        <ContactForm />
+
+        {/* <ContactForm /> */}
+        <p style={{ color: "#eee" }}>
+          Please send enquiries to our team secretary Kelly:{" "}
+          <a
+            href={`mailto:Kellybetteridge87@gmail.com`}
+            style={{ color: "#ffd600" }}
+          >
+            Kellybetteridge87@gmail.com
+          </a>
+        </p>
       </section>
     </Layout>
   );
