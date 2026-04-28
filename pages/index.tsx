@@ -24,7 +24,7 @@ export default function Home() {
             textShadow: "0 2px 8px #000",
           }}
         >
-          Spondon Dynamos Bolts U7s 25/26 season
+          Spondon Dynamos Bolts U8s 26/27 season
         </h1>
 
         {/* Large logo */}

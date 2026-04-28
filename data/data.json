@@ -1,9 +1,9 @@
 {
-  "teamName": "Spondon Dynamos Under 7 Bolts",
-  "welcomeMessageTop": "Spondon Dynamos Bolts U7s 25/26 season",
+  "teamName": "Spondon Dynamos Under 8 Bolts",
+  "welcomeMessageTop": "Spondon Dynamos Bolts U8s 26/27 season",
   "welcomeMessageBottom": "We play in the Derby Junior League and train in Spondon!",
   "about": {
-    "description": "We are a passionate grassroots football team for under 7s, playing in the Derby Junior League and training in Spondon.",
+    "description": "We are a passionate grassroots football team for under 8s, playing in the Derby Junior League and training in Spondon.",
     "officials": [
       {
         "name": "Connor Cobbledick",
@@ -33,8 +33,8 @@
     "matches": [
       {
         "day": "Sunday",
-        "time": "13:30 Kick Off",
-        "location": "University of Derby Sports Centre"
+        "time": "TBC",
+        "location": "Lees Brook Academy"
       }
     ]
   },
