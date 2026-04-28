@@ -63,17 +63,19 @@ const Sidebar = () => {
           style={{ borderRadius: 12, background: "#fff" }}
         />
       </div>
-      {!open && (
-        <button
-          className={styles.hamburger}
-          onClick={() => setOpen(true)}
-          aria-label="Open menu"
-        >
-          <span />
-          <span />
-          <span />
-        </button>
-      )}
+      <div className={styles.hamburgerWrap}>
+        {!open && (
+          <button
+            className={styles.hamburger}
+            onClick={() => setOpen(true)}
+            aria-label="Open menu"
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        )}
+      </div>
       <ul className={`${styles.menu} ${open ? styles.open : ""}`}>
         {menuItems.map((item) => (
           <li key={item.label}>
