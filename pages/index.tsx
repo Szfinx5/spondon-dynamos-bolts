@@ -57,9 +57,9 @@ export default function Home() {
               margin: 0,
             }}
           >
-            A warm welcome to the Spondon Dynamos Bolts. We are a U7 grassroots
-            football team currently playing in the Derby Junior Football League
-            throughout the 2025/2026 season.
+            A warm welcome to the Spondon Dynamos Bolts. We are a U8 grassroots
+            football team playing in the Derby Junior Football League throughout
+            the 2026/2027 season.
             <br />
             <br />
             Training is based at our home ground in Spondon where we pride
