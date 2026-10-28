@@ -56,6 +56,20 @@ export default function Sponsors() {
             </div>
           </div>
         ))}
+        <div style={{ marginTop: "2rem" }}>
+          <Image
+            src={data.images.sponsorsPhoto}
+            alt="Team Match Photo"
+            width={650}
+            height={500}
+            style={{
+              borderRadius: "1.5rem",
+              width: "100%",
+              height: "auto",
+              boxShadow: "0 4px 24px rgba(0,0,0,0.2)",
+            }}
+          />
+        </div>
       </section>
     </Layout>
   );
