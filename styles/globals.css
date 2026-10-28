@@ -1,47 +1,81 @@
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background: #181818;
-  color: #ffd600;
-  box-sizing: border-box;
-  overflow-x: hidden;
+:root {
+  /* Colours taken from the home kit and club crest */
+  --kit-yellow: #ffe11a;
+  --crest-gold: #f5be16;
+  --kit-black: #0e0e0e;
+  --charcoal: #161616;
+  --line: #262626;
+  --chalk: #f4f4f0;
+  --white: #ffffff;
+  --text-muted: #c9c9c2;
+  --text-subtle: #b8b8b0;
+  --text-dark-muted: #5a5a52;
+  --text-dark-body: #33332e;
+
+  --container: 1240px;
+  --gutter: 24px;
+  /* Space between the header and the first line of every page */
+  --page-top: 64px;
+
+  /* Black brush slashes, as on the shirts */
+  --kit-stripe: repeating-linear-gradient(
+    -28deg,
+    transparent 0 14px,
+    var(--kit-black) 14px 17px,
+    transparent 17px 26px,
+    var(--kit-black) 26px 34px,
+    transparent 34px 58px
+  );
 }
 
-body {
-  min-height: 100vh;
-  width: 100vw;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #ffd600 #232323;
-}
-
-#\_next {
-  min-height: 100vh;
-}
-
-/* Remove unwanted white border from Next.js default */
 * {
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-  background: #232323;
-}
-::-webkit-scrollbar-thumb {
-  background: #ffd600;
-  border-radius: 4px;
-}
-::-webkit-scrollbar:horizontal {
-  height: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--kit-black);
+  color: var(--chalk);
+  overflow-x: hidden;
 }
 
-/* Hide scrollbar if not needed */
-body:has(.container) {
-  overflow-y: auto;
+/* Keep room for the scrollbar on every page so the layout doesn't shift */
+html {
+  scrollbar-gutter: stable;
 }
-body:has(.container):not(:has(.main > *)) {
-  overflow-y: hidden;
+
+/* Wraps every page in _app.tsx, where next/font sets the font variables */
+.app {
+  --font-heading: var(--font-barlow-condensed), "Arial Narrow", sans-serif;
+  --font-body: var(--font-barlow), system-ui, sans-serif;
+  font-family: var(--font-body);
+}
+
+body {
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--kit-yellow);
+  outline-offset: 3px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--charcoal);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--kit-yellow);
+  border-radius: 4px;
 }

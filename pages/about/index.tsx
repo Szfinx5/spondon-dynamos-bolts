@@ -1,6 +1,10 @@
-import Layout from "../../components/Layout";
-import data from "../../data/data.json";
 import dynamic from "next/dynamic";
+import Image from "next/image";
+import Layout from "../../components/Layout";
+import PageHeader from "../../components/PageHeader";
+import data from "../../data/data.json";
+import shared from "../../styles/Shared.module.css";
+import styles from "../../styles/About.module.css";
 
 const Slideshow = dynamic(() => import("../../components/Slideshow"), {
   ssr: false,
@@ -9,83 +13,43 @@ const Slideshow = dynamic(() => import("../../components/Slideshow"), {
 export default function About() {
   return (
     <Layout>
-      <section
-        style={{
-          color: "#ffd600",
-          background: "#181818",
-          borderRadius: "1rem",
-          padding: "2rem",
-          margin: "2rem auto",
-          maxWidth: 700,
-          boxShadow: "0 4px 24px rgba(0,0,0,0.2)",
-        }}
-      >
-        <h1
-          style={{
-            fontSize: "2.5rem",
-            fontWeight: 700,
-            marginBottom: "1rem",
-            color: "#ffd600",
-          }}
-        >
-          Team Bolts
-        </h1>
-        <p style={{ color: "#eee", fontSize: "1.2rem", marginBottom: "1rem" }}>
-          {data.about.description}
-        </p>
-        <p style={{ color: "#ffd600", fontWeight: 600 }}>{data.teamName}</p>
-        Team Officials:
-        <p
-          style={{
-            color: "#eee",
-            gap: "0.5rem",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          {data.about.officials.map((official, index) => (
-            <span key={index}>
-              {official.name} - {official.role}
-              {index < data.about.officials.length - 1 && <br />}
-            </span>
-          ))}
-        </p>
-        <p style={{ color: "#ffd600" }}>Training Sessions:</p>
-        <p
-          style={{
-            color: "#eee",
-            gap: "0.5rem",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          {data.about.training.map((session, index) => (
-            <span key={index}>
-              {session.day} - {session.time} @ {session.location}
-              {index < data.about.training.length - 1 && <br />}
-            </span>
-          ))}
-        </p>
-        <div>
-          League Matches:
-          <p
-            style={{
-              color: "#eee",
-              gap: "0.5rem",
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            {data.about.matches.map((match, index) => (
-              <span key={index}>
-                {match.day} - {match.time} @ {match.location}
-                {index < data.about.matches.length - 1 && <br />}
-              </span>
-            ))}
-          </p>
+      <PageHeader eyebrow={data.teamName} title="Team Bolts" />
+
+      {/* About + officials */}
+      <section className={shared.sectionLight}>
+        <div className={`${shared.container} ${shared.split}`}>
+          <div className={shared.splitItem}>
+            <Image
+              src={data.images.aboutPhoto}
+              alt="Bolts players on matchday"
+              width={1600}
+              height={1200}
+              sizes="(max-width: 1000px) 100vw, 580px"
+              className={`${shared.photo} ${styles.aboutPhoto}`}
+            />
+          </div>
+          <div className={shared.splitItem}>
+            <p className={shared.eyebrow}>About the team</p>
+            <h2 className={styles.aboutTitle}>{data.home.aboutTitle}</h2>
+            <p className={shared.body}>{data.home.aboutText}</p>
+            <h3 className={shared.subtitle}>Team officials</h3>
+            <div className={shared.people}>
+              {data.about.officials.map((official) => (
+                <div key={official.name} className={shared.person}>
+                  <p className={shared.personName}>{official.name}</p>
+                  <p className={shared.personRole}>{official.role}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-        {/* Slideshow */}
-        <Slideshow />
+      </section>
+
+      <section className={shared.section}>
+        <div className={`${shared.container} ${styles.gallery}`}>
+          <h2 className={shared.title}>Gallery</h2>
+          <Slideshow />
+        </div>
       </section>
     </Layout>
   );

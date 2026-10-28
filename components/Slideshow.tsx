@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
+import styles from "../styles/Slideshow.module.css";
 
 const SLIDES = [
   "/slideshow/charlie1.jpeg",
@@ -73,89 +74,40 @@ export default function Slideshow() {
   const shuffledSlides = useMemo(() => shuffle(SLIDES), []);
 
   return (
-    <div style={{ position: "relative", maxWidth: 500, margin: "2rem auto" }}>
+    <div className={styles.slideshow}>
       <div
         ref={emblaRef}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        style={{
-          overflow: "hidden",
-          borderRadius: "1.2rem",
-          background: "#111",
-        }}
+        className={styles.viewport}
       >
-        <div style={{ display: "flex" }}>
+        <div className={styles.track}>
           {shuffledSlides.map((src, idx) => (
-            <div
-              key={src}
-              style={{
-                flex: "0 0 100%",
-                minWidth: 0,
-                position: "relative",
-                height: 320,
-                background: "#222",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
+            <div key={src} className={styles.slide}>
               <Image
                 src={src}
-                alt={`Slideshow ${idx + 1}`}
-                width={400}
-                height={320}
-                style={{
-                  objectFit: "contain",
-                  maxHeight: 320,
-                  maxWidth: "100%",
-                }}
-                sizes="(max-width: 600px) 100vw, 400px"
+                alt={`Bolts photo ${idx + 1}`}
+                width={800}
+                height={600}
+                className={styles.image}
+                sizes="(max-width: 860px) 100vw, 800px"
                 priority={idx === 0}
               />
             </div>
           ))}
         </div>
       </div>
-      {/* Arrows */}
       <button
         aria-label="Previous slide"
         onClick={() => emblaApi && emblaApi.scrollPrev()}
-        style={{
-          position: "absolute",
-          left: 10,
-          top: "50%",
-          transform: "translateY(-50%)",
-          background: "rgba(0,0,0,0.6)",
-          color: "#ffd600",
-          border: "none",
-          borderRadius: "50%",
-          width: 36,
-          height: 36,
-          fontSize: 24,
-          cursor: "pointer",
-          zIndex: 2,
-        }}
+        className={`${styles.arrow} ${styles.prev}`}
       >
         &#8592;
       </button>
       <button
         aria-label="Next slide"
         onClick={() => emblaApi && emblaApi.scrollNext()}
-        style={{
-          position: "absolute",
-          right: 10,
-          top: "50%",
-          transform: "translateY(-50%)",
-          background: "rgba(0,0,0,0.6)",
-          color: "#ffd600",
-          border: "none",
-          borderRadius: "50%",
-          width: 36,
-          height: 36,
-          fontSize: 24,
-          cursor: "pointer",
-          zIndex: 2,
-        }}
+        className={`${styles.arrow} ${styles.next}`}
       >
         &#8594;
       </button>

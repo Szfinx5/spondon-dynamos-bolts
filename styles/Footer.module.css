@@ -1,0 +1,54 @@
+.footer {
+  background: var(--kit-black);
+}
+
+.stripe {
+  height: 8px;
+  background-color: var(--kit-yellow);
+  background-image: var(--kit-stripe);
+}
+
+.inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 40px var(--gutter);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px 40px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.crest {
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.copy {
+  margin: 0;
+  font-size: 15px;
+  color: var(--text-subtle);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  margin-left: auto;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.links a {
+  color: var(--chalk);
+  text-underline-offset: 3px;
+}
+
+.links a:hover {
+  color: var(--kit-yellow);
+}

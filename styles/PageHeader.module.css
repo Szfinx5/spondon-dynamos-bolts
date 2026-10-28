@@ -1,0 +1,15 @@
+.header {
+  padding: var(--page-top) 0 56px;
+  background: var(--kit-black);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-style: italic;
+  font-size: clamp(48px, 8vw, 96px);
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: var(--chalk);
+}

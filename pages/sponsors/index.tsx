@@ -1,73 +1,46 @@
-import Layout from "../../components/Layout";
-import data from "../../data/data.json";
 import Image from "next/image";
+import Layout from "../../components/Layout";
+import PageHeader from "../../components/PageHeader";
+import data from "../../data/data.json";
+import shared from "../../styles/Shared.module.css";
+import styles from "../../styles/Sponsors.module.css";
 
 export default function Sponsors() {
   return (
     <Layout>
-      <section
-        style={{
-          color: "#ffd600",
-          background: "#181818",
-          borderRadius: "1rem",
-          padding: "2rem",
-          margin: "2rem auto",
-          maxWidth: 700,
-          boxShadow: "0 4px 24px rgba(0,0,0,0.2)",
-        }}
-      >
-        <h1
-          style={{
-            fontSize: "2.5rem",
-            fontWeight: 700,
-            marginBottom: "1rem",
-            color: "#ffd600",
-          }}
-        >
-          Sponsors
-        </h1>
-        {data.sponsors.map((sponsor) => (
-          <div
-            key={sponsor.name}
-            style={{
-              marginBottom: "2rem",
-              display: "flex",
-              alignItems: "center",
-              gap: "2rem",
-            }}
-          >
-            <Image
-              src={sponsor.logo}
-              alt={sponsor.name}
-              width={180}
-              height={80}
-              style={{
-                background: "#fff",
-                padding: "1rem",
-                borderRadius: "8px",
-                width: "auto",
-                height: "auto",
-              }}
-            />
-            <div>
-              <p style={{ color: "#fff", fontSize: "1.1rem" }}>
-                {sponsor.description}
-              </p>
-            </div>
-          </div>
-        ))}
-        <div style={{ marginTop: "2rem" }}>
+      <PageHeader eyebrow="Proudly supported by" title="Sponsors" />
+
+      <section className={shared.sectionLight}>
+        <div className={`${shared.container} ${styles.list}`}>
+          {data.sponsors.map((sponsor) => (
+            <article key={sponsor.name} className={styles.sponsor}>
+              <div className={styles.logoTile}>
+                <Image
+                  src={sponsor.logo}
+                  alt={sponsor.name}
+                  width={240}
+                  height={120}
+                  className={styles.logo}
+                />
+              </div>
+              <div className={styles.text}>
+                <h2 className={styles.name}>{sponsor.name}</h2>
+                <p className={styles.description}>{sponsor.description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className={shared.section}>
+        <div className={shared.container}>
           <Image
             src={data.images.sponsorsPhoto}
-            alt="Team Match Photo"
-            width={650}
-            height={500}
-            style={{
-              borderRadius: "1.5rem",
-              width: "100%",
-              height: "auto",
-              boxShadow: "0 4px 24px rgba(0,0,0,0.2)",
-            }}
+            alt="Bolts players on matchday"
+            width={1600}
+            height={1200}
+            sizes="(max-width: 1240px) 100vw, 1192px"
+            className={`${shared.photo} ${styles.photo}`}
           />
         </div>
       </section>

@@ -1,0 +1,24 @@
+.aboutPhoto {
+  border-bottom: 8px solid var(--kit-black);
+}
+
+.aboutTitle {
+  margin: 0 0 22px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-style: italic;
+  font-size: clamp(36px, 5vw, 52px);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.gallery > * {
+  width: 100%;
+}
