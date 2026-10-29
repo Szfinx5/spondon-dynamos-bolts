@@ -10,8 +10,6 @@
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 56px;
-  padding-top: var(--page-top);
-  padding-bottom: 88px;
 }
 
 .heroText {

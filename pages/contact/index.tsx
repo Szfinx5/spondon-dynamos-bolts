@@ -5,35 +5,6 @@ import data from "../../data/data.json";
 import shared from "../../styles/Shared.module.css";
 import styles from "../../styles/Contact.module.css";
 
-// Not shown yet: there is no backend to send messages to
-function ContactForm() {
-  return (
-    <form
-      className={styles.form}
-      onSubmit={(e) => {
-        e.preventDefault();
-        alert("Message sent! (placeholder)");
-      }}
-    >
-      <label className={styles.field}>
-        Your name
-        <input type="text" required className={styles.input} />
-      </label>
-      <label className={styles.field}>
-        Your email
-        <input type="email" required className={styles.input} />
-      </label>
-      <label className={styles.field}>
-        Your message
-        <textarea required rows={4} className={styles.input} />
-      </label>
-      <button type="submit" className={shared.buttonPrimary}>
-        Send
-      </button>
-    </form>
-  );
-}
-
 export default function Contact() {
   return (
     <Layout>
