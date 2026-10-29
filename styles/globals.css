@@ -28,6 +28,12 @@
   );
 }
 
+@media (max-width: 640px) {
+  :root {
+    --page-top: 32px;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -38,7 +44,8 @@ body {
   padding: 0;
   background: var(--kit-black);
   color: var(--chalk);
-  overflow-x: hidden;
+  /* clip, not hidden: hidden makes body a scroll container and breaks the sticky header */
+  overflow-x: clip;
 }
 
 /* Keep room for the scrollbar on every page so the layout doesn't shift */
