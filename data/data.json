@@ -1,9 +1,16 @@
 {
   "teamName": "Spondon Dynamos Under 8 Bolts",
-  "welcomeMessageTop": "Spondon Dynamos Bolts U8s 26/27 season",
-  "welcomeMessageBottom": "We play in the Derby Junior League and train in Spondon!",
+  "shortName": "Bolts U8",
+  "clubName": "Spondon Dynamos FC",
+  "season": "2026/27",
+  "league": "Derby Junior League",
+  "home": {
+    "intro": "Grassroots football for under 8s, playing in the Derby Junior League. A safe, fun environment where children develop their skills, their confidence and a love of the game.",
+    "aboutTitle": "Learning the game, together",
+    "aboutText": "We are a passionate grassroots team for under 8s, part of Spondon Dynamos FC. Every player gets time on the ball, encouragement and the chance to grow, at training and on matchday."
+  },
   "about": {
-    "description": "We are a passionate grassroots football team for under 8s, playing in the Derby Junior League and training in Spondon.",
+    "description": "We are a passionate grassroots football team for under 8s, playing in the Derby Junior League.",
     "officials": [
       {
         "name": "Connor Cobbledick",
@@ -13,7 +20,6 @@
         "name": "Gabor Havasi",
         "role": "Assistant Team Manager"
       },
-
       {
         "name": "Simon Key",
         "role": "Parent Helper"
@@ -26,15 +32,20 @@
     "training": [
       {
         "day": "Wednesday",
+        "time": "17:00 - 18:00",
+        "location": "Leisure United Racecourse"
+      },
+      {
+        "day": "Friday",
         "time": "17:30 - 18:30",
-        "location": "Spondon Gravelpit Recreation Ground"
+        "location": "Alvaston Park"
       }
     ],
     "matches": [
       {
         "day": "Sunday",
-        "time": "TBC",
-        "location": "Lees Brook Academy"
+        "time": "12:30",
+        "location": "University of Derby"
       }
     ]
   },
@@ -53,8 +64,9 @@
   "contact": {
     "manager": "Connor Cobbledick",
     "phone": "07950 388002",
-    "email": "",
-    "form": true
+    "email": "Kellybetteridge87@gmail.com",
+    "form": true,
+    "secretary": "Kelly Betteridge"
   },
   "parentConsentForm": {
     "label": "Download Parent Consent Form",
@@ -67,12 +79,13 @@
     },
     {
       "label": "Derby Junior League",
-      "url": "https://fulltime.thefa.com/index.html?league=121976933"
+      "url": "https://fulltime.thefa.com/index.html?selectedSeason=735538466&selectedFixtureGroupAgeGroup=0&selectedDivision=182200902&selectedCompetition=0#tab-2"
     }
   ],
   "images": {
     "logo": "/logo.jpeg",
     "teamPhoto": "/team/U8-match-3.jpeg",
-    "sponsorsPhoto": "/team/U8-match-2.jpeg"
+    "sponsorsPhoto": "/team/U8-match-2.jpeg",
+    "aboutPhoto": "/team/U8-match-1.jpeg"
   }
 }

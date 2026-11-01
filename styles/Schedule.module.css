@@ -1,0 +1,64 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--kit-black);
+  border-top: 4px solid var(--kit-yellow);
+  padding: 28px;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  fill: none;
+  stroke: var(--kit-yellow);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.label {
+  margin: 18px 0 6px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--chalk);
+}
+
+.highlight {
+  margin: 6px 0 14px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--kit-yellow);
+}
+
+.detail {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.link {
+  font-weight: 600;
+  color: var(--chalk);
+  text-underline-offset: 3px;
+}
+
+.link:hover {
+  color: var(--kit-yellow);
+}

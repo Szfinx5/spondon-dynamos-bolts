@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
-import Sidebar from "./Sidebar";
+import Header from "./Header";
+import Footer from "./Footer";
 import styles from "../styles/Layout.module.css";
 
 interface LayoutProps {
@@ -8,8 +9,9 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => (
   <div className={styles.container}>
-    <Sidebar />
+    <Header />
     <main className={styles.main}>{children}</main>
+    <Footer />
   </div>
 );
 

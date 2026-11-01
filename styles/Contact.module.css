@@ -1,0 +1,69 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--kit-black);
+  border-top: 4px solid var(--kit-yellow);
+  padding: 28px;
+  min-width: 0;
+}
+
+.label {
+  margin: 0 0 6px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+}
+
+.name {
+  margin: 0 0 10px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.value {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--kit-yellow);
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.value:hover {
+  color: var(--chalk);
+}
+
+.form {
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.input {
+  padding: 12px;
+  font: inherit;
+  color: var(--kit-black);
+  background: var(--white);
+  border: 2px solid var(--line);
+}
+
+.schedule {
+  margin-top: 64px;
+}
