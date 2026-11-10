@@ -1,0 +1,234 @@
+/* Fixtures list: one card per match, grouped by month */
+
+.monthGroup + .monthGroup {
+  margin-top: 56px;
+}
+
+.monthTitle {
+  margin: 0 0 18px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-style: italic;
+  font-size: 30px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--kit-yellow);
+}
+
+.list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Desktop: date | teams | kick-off + venue */
+.fixture {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr) 280px;
+  align-items: stretch;
+  background: var(--kit-black);
+  border-left: 4px solid var(--line);
+}
+
+.next {
+  border-left-color: var(--kit-yellow);
+  box-shadow: 0 0 0 1px var(--kit-yellow);
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 8px;
+  background: var(--line);
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.next .date {
+  background: var(--kit-yellow);
+  color: var(--kit-black);
+}
+
+.weekday,
+.month {
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.14em;
+}
+
+.day {
+  margin: 4px 0;
+  font-weight: 800;
+  font-size: 40px;
+}
+
+.main {
+  padding: 20px 24px;
+  min-width: 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.tag {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border: 1px solid var(--text-subtle);
+  color: var(--text-subtle);
+}
+
+.tagCup {
+  composes: tag;
+  border-color: var(--crest-gold);
+  color: var(--crest-gold);
+}
+
+.tagNext {
+  composes: tag;
+  border-color: var(--kit-yellow);
+  background: var(--kit-yellow);
+  color: var(--kit-black);
+}
+
+.teams {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.team {
+  color: var(--chalk);
+}
+
+.teamBolts {
+  color: var(--kit-yellow);
+}
+
+.vs {
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.14em;
+  color: var(--text-subtle);
+}
+
+.competition {
+  margin: 8px 0 0;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.details {
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  margin: 0;
+  padding: 20px 24px;
+  border-left: 1px solid var(--line);
+}
+
+.details dt {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+}
+
+.details dd {
+  margin: 2px 0 0;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--chalk);
+}
+
+.details .kickoff {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1;
+  color: var(--kit-yellow);
+}
+
+.pitch {
+  display: block;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.note {
+  margin: 48px 0 0;
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+/* Tablet: details drop under the teams */
+@media (max-width: 860px) {
+  .fixture {
+    grid-template-columns: 84px minmax(0, 1fr);
+  }
+
+  .details {
+    grid-column: 2;
+    grid-template-columns: auto 1fr;
+    gap: 16px 28px;
+    padding-top: 0;
+    border-left: 0;
+  }
+}
+
+/* Phone: date becomes a strip across the top */
+@media (max-width: 560px) {
+  .fixture {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .date {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 10px 16px;
+  }
+
+  .day {
+    margin: 0;
+    font-size: 22px;
+  }
+
+  .main {
+    padding: 16px 16px 12px;
+  }
+
+  .teams {
+    font-size: 22px;
+  }
+
+  .details {
+    grid-column: 1;
+    padding: 0 16px 16px;
+  }
+
+  .monthTitle {
+    font-size: 26px;
+  }
+}
