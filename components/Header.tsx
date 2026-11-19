@@ -11,6 +11,7 @@ const menuItems = [
   { label: "Sponsors", href: "/sponsors" },
   { label: "Parent Consent", href: "/parent-consent" },
   { label: "Fixtures", href: "/fixtures" },
+  { label: "Results", href: "/results" },
 ];
 
 const Header = () => {

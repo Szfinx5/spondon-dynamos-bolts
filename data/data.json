@@ -51,6 +51,94 @@
   },
   "fixtures": [
     {
+      "type": "league",
+      "date": "2026-09-06",
+      "time": "12:30",
+      "home": "Duffield Dynamo Falcons",
+      "away": "Spondon Dynamos Bolts",
+      "venue": "University of Derby",
+      "pitch": null,
+      "competition": "Euro Soccer - U8 Group 4",
+      "result": "draw"
+    },
+    {
+      "type": "league",
+      "date": "2026-09-13",
+      "time": "12:30",
+      "home": "Spondon Dynamos Bolts",
+      "away": "Heanor Juniors Jaguars",
+      "venue": "University of Derby",
+      "pitch": null,
+      "competition": "Euro Soccer - U8 Group 4",
+      "result": "win"
+    },
+    {
+      "type": "league",
+      "date": "2026-09-20",
+      "time": "12:30",
+      "home": "Littleover Dazzlers Milan",
+      "away": "Spondon Dynamos Bolts",
+      "venue": "University of Derby",
+      "pitch": null,
+      "competition": "Euro Soccer - U8 Group 4",
+      "result": "win"
+    },
+    {
+      "type": "league",
+      "date": "2026-09-27",
+      "time": "12:30",
+      "home": "Spondon Dynamos Bolts",
+      "away": "Mickleover Juniors Boca",
+      "venue": "University of Derby",
+      "pitch": null,
+      "competition": "Euro Soccer - U8 Group 4",
+      "result": "win"
+    },
+    {
+      "type": "cup",
+      "date": "2026-10-04",
+      "time": "14:30",
+      "home": "Springwood United Bolts",
+      "away": "Spondon Dynamos Bolts",
+      "venue": "University of Derby",
+      "pitch": null,
+      "competition": "Euro Soccer Shield - U8",
+      "result": "win"
+    },
+    {
+      "type": "league",
+      "date": "2026-10-11",
+      "time": "12:30",
+      "home": "Toton United Hawks",
+      "away": "Spondon Dynamos Bolts",
+      "venue": "University of Derby",
+      "pitch": null,
+      "competition": "Euro Soccer - U8 Group 4",
+      "result": "win"
+    },
+    {
+      "type": "league",
+      "date": "2026-10-18",
+      "time": "12:30",
+      "home": "Spondon Dynamos Bolts",
+      "away": "Alfreton Town Juniors Panthers",
+      "venue": "University of Derby",
+      "pitch": null,
+      "competition": "Euro Soccer - U8 Group 4",
+      "result": "win"
+    },
+    {
+      "type": "league",
+      "date": "2026-10-25",
+      "time": "12:30",
+      "home": "Allestree Juniors PSG",
+      "away": "Spondon Dynamos Bolts",
+      "venue": "University of Derby",
+      "pitch": null,
+      "competition": "Euro Soccer - U8 Group 4",
+      "result": "win"
+    },
+    {
       "type": "cup",
       "date": "2026-11-15",
       "time": "13:30",
@@ -58,7 +146,8 @@
       "away": "Spondon Dynamos Bolts",
       "venue": "University of Derby",
       "pitch": "Pitch 4",
-      "competition": "Euro Soccer Shield - U8"
+      "competition": "Euro Soccer Shield - U8",
+      "result": "win"
     },
     {
       "type": "league",
